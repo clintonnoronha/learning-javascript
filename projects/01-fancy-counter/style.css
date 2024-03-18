@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    all: unset;
+}
+
+body {
+    background-image: radial-gradient(ellipse, #385300, #212900);
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    background-color: #bef227;
+    border-radius: 12px;
+    box-shadow: 0 25px 121px rgba(0, 0, 0, 0.5);
+    height: 615px;
+    width: 476px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+.counter--limit {
+    background-color: #a3d11b;
+}
+
+.counter__title {
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    width: 238px;
+    text-align: center;
+    line-height: .975;
+    font-weight: 500;
+    font-size: 2em;
+    margin-top: 50px;
+}
+
+.counter__value {
+    color: #1d2507;
+    font-size: 12.5em;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.counter__reset-button {
+    cursor: pointer;
+}
+
+.counter__reset-icon {
+    opacity: 0.3;
+    font-size: 2em;
+    /* opacity is the property for which we want transition in 0.4s */
+    transition: opacity 0.4s;
+    /* or we can select all properties will have transition in 0.4s */
+    /* transition: all 0.4s; */
+}
+
+.counter__reset-icon:hover {
+    opacity: 0.5;
+}
+
+.counter__buttons {
+    background-color: #1d2507;
+    height: 116px;
+    width: 100%;
+    margin-top: auto;
+    border-radius: 0px 0px 10px 10px;
+    /* or */
+    /* border-bottom-left-radius: 10px; */
+    /* border-bottom-right-radius: 10px; */
+    display: flex;
+}
+
+.counter__button {
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s;
+}
+
+.counter__button:hover {
+    background-color: #212b06;
+}
+
+.counter__button:disabled {
+    cursor: not-allowed;
+}
+
+.counter__button--increment {
+    border-left: 1px solid rgba(189, 254, 0, 0.15);
+}
+
+.counter__button--decrement {
+
+}
+
+.counter__icon {
+    color: #bdfe00;
+    opacity: 0.9;
+    font-size: 2em; 
+}
+
+.counter__icon--plus {
+    
+}
+
+.counter__icon--minus {
+    
+}
+
+@media (max-width: 680px) or (max-height: 730px) {
+    .counter {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .counter__title {
+        margin-top: 100px;
+    }
+
+    .counter__buttons {
+        border-radius: 0;
+    }
+}
